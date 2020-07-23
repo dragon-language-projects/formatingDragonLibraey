@@ -1,7 +1,8 @@
 select "std"
+select "types"
 /*
 name: austin heisley cook
-date:7/21/20
+date:7/21/20a
 base formating library for dragon
 */
 func setSpacing(num, text) {
@@ -16,6 +17,29 @@ start++
 echo(" "*start,text)
 }
 
+func setPrecision(num,point) {
+if point == -1 {
+   return float(num) * 1
+   
+   } 
+
+if point == 1 {
+   return float(num) / 10
+   
+   } 
+if point == 2 {
+   return float(num) / 100
+}
+
+if point == 3 {
+   return float(num) / 1000
+}
+
+echo(setPrecision(40,2))
+
+}
 
 
-
+echo(setPrecision(40,-1))
+echo(setPrecision(40,2))
+echo(setPrecision(40,3))
